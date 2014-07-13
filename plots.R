@@ -34,7 +34,7 @@ barplot(all_regions_summary$total,
         col="darkblue",
         xlab="Year",
         ylab=expression('Tons PM'[2.5]),
-        main=expression("Total Emissions PM"[2.5]),
+        main=expression("Total US Emissions PM"[2.5]),
         names.arg=all_regions_summary$year
         )
 dev.off()
@@ -50,7 +50,7 @@ barplot(balt_summary$total,
         col="darkblue",
         xlab="Year",
         ylab=expression('Tons PM'[2.5]),
-        main=expression("Baltimore, MD: Emissions PM"[2.5]),
+        main=expression("Total Baltimore Emissions PM"[2.5]),
         names.arg=balt_summary$year        
 )
 dev.off()
