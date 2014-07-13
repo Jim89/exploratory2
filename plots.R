@@ -29,7 +29,7 @@ sources<-readRDS("./data/Source_Classification_Code.rds")
 ################################################################################
 all_regions_summary<-summarize(group_by(select(data,Emissions,year),year),total=sum(Emissions))
 options(scipen=10)
-png("plot1.png")
+png("./plots/plot1.png")
 barplot(all_regions_summary$total,
         col="darkblue",
         xlab="Year",
@@ -45,7 +45,7 @@ dev.off()
 baltimore <-filter(data,data$fips=="24510")
 balt_summary<-summarize(group_by(select(baltimore,Emissions,year),year),total=sum(Emissions))
 rm(baltimore)
-png("plot2.png")
+png("./plots/plot2.png")
 barplot(balt_summary$total,
         col="darkblue",
         xlab="Year",
