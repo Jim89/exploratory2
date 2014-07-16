@@ -174,17 +174,16 @@ plot5a<-
 )
 plot5b<-
 (
-ggplot(la_balt_summary,aes(x=year,y=total,color=Location))
+ggplot(la_balt_summary,aes(x=year,y=log(total,base=exp(1)),color=Location))
 +geom_line()
 +scale_colour_manual(values=c("firebrick","dodgerblue4"))
-+labs(x="Year",y=expression("Tons PM"[2.5]),title=expression("Line Chart of Emissions from Vehicle Sources PM"[2.5]))
++labs(x="Year",y=expression("Ln PM"[2.5]),title=expression("Line Chart of Emissions from Vehicle Sources PM"[2.5]))
 +theme_minimal()
 +theme(legend.position="bottom")
 )
 png("./plots/plot6.png",height=480,width=960)
 grid.arrange(plot5a,plot5b,ncol=2)
 dev.off()
-
 
 
 
